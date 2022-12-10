@@ -1,0 +1,65 @@
+var iFileName = "Wizard - Chronourgy.js";
+RequiredSheetVersion(12.999);
+
+AddSubClass("wizard", "Chronourgy", {
+	regExpSearch : /^(?=.*wizard)(?=.*chronourgy).*$/i,
+	subname : "Chronourgy",
+	source : ["EgtW", 0],
+	spellcastingExtra : ["dissonant whispers", "find familiar", "spike growth", "call lightning", "phantom steed", "faithful hound", "raise dead"],
+	features : {
+		"subclassfeature2" : {
+			name : "Chronal Shift",
+			source : ["EGtW", 0],
+			minlevel : 2,
+			description : desc([
+				"At 2nd level, you can magically exert limited control over the flow of time around a creature.",
+        "As a reaction, after you or a creature you can see within 30 feet of you makes",
+        "an attack roll, an ability check, or a saving throw, you can force the creature to reroll.",
+        "You make this decision after you see whether the roll succeeds or fails.",
+        "The target must use the result of the second roll."
+			]),
+		},
+		"subclassfeature2.1" : {
+			name : "Temporal Awareness",
+			source : ["EGtW", 0],
+			minlevel : 2,
+			description : desc([
+				"You can add your Intelligence modifiers to your initiative rolls."		
+			]),
+		},
+		"subclassfeature6" : {
+			name : "Momentary Stasis",
+			source : ["EGtW", 0],
+			minlevel : 6,
+			description : desc([
+				"As an action, you can magically force a Large or smaller creature within 60 feet of you to make a Constitution saving throw.",
+				"The creature is encased in a field of magical energy until the end of your next turn or until the creature takes any damage.",
+				"While encased in this way, the creature is incapacitated and has a speed of 0.",
+				"You can use this feature a number of times equal to your Intelligence modifier,",
+				"You regain all expended uses when you finish a long rest."
+			]),
+		},
+		"subclassfeature10" : {
+			name : "Arcane Abeyance",
+			source : ["EGtW", 0],
+			minlevel : 10,
+			description : desc([
+        "when you cast a spell using a spell slot of 4th level or lower, you can condense the spell's magic into a mote.",
+        "The spell is frozen in time at the moment of casting and held within a gray bead for INT Modifier hour.",
+        "This bead is a Tiny object with AC 15 and 1 hit point, and it is immune to poison and psychic damage.",
+        "When the duration ends, or if the bead is destroyed, it vanishes in aflash of light, and the spell is lost.",
+        "A creature that wields the bead can use the spell inside it with one action.",
+        "Once you create a bead with this feature, you can't do so again until you finish a short or long rest."
+		},
+		"subclassfeature14" : {
+			name : "Convergent Future",
+			source : ["EGtW", 0],
+			minlevel : 14,
+			description : desc([
+				"When you or a creature you can see within 60 feet of you makes a d20 throw,",
+				"you can use your reaction to ignore the die roll and decide whether the throw fails or succed",
+				"When you use this feature, you gain one level of exhaustion."
+			])
+		}
+	}
+});
